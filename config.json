@@ -1,7 +1,4 @@
 {
-  "dns": {
-    "servers": ["8.8.8.8", "1.1.1.1"]
-  },
   "inbounds": [
     {
       "port": 8080,
@@ -9,7 +6,7 @@
       "settings": {
         "clients": [
           {
-            "id": "07e910f0-e64f-4f4f-969a-3050b15ac8c6",
+            "id": "98f882da-6028-4a73-acb4-789043657fa1",
             "level": 0
           }
         ],
@@ -18,10 +15,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/tg-@GCP_INTRNET_DZ",
-          "headers": {
-            "Host": "youtube.com"
-          }
+          "path": "/@GCP_INTRNET_DZ"
         }
       }
     }
@@ -29,9 +23,7 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIP" 
-      }
+      "settings": {}
     }
   ]
 }
