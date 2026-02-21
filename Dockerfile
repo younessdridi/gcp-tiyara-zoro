@@ -1,11 +1,10 @@
 FROM teddysun/v2ray:latest
 
-# ضبط المتغيرات لتقليل استهلاك الذاكرة وزيادة السرعة
-ENV V2RAY_VMESS_AEAD_FORCED=false
-
-COPY config.json /etc/v2ray/config.json
-
-# تأكد أن البورت 8080 مفتوح تماماً
+# Expose the correct container port (8080)
 EXPOSE 8080
 
+# Copy the VLESS config into the container
+COPY config.json /etc/v2ray/config.json
+
+# Run V2Ray with the config file
 CMD ["v2ray", "run", "-config", "/etc/v2ray/config.json"]
